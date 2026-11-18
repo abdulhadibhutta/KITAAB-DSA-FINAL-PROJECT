@@ -4,6 +4,6 @@
 
 ### Completed
 - Created GitHub repository.
-- Created the `Book` structure.
+- Created the Book structure.
 - Implemented the Dynamic Array Class.
 - Created the first Git commit and pushed it to GitHub.
