@@ -15,6 +15,7 @@ public:
     DynamicArray(const DynamicArray& other);
     DynamicArray& operator=(const DynamicArray& other);
     void add(const Book& book);
+    void clear();
     Book& get(int index);
     const Book& get(int index) const;
     int size() const;

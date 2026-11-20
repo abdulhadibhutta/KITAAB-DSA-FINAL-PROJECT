@@ -3,7 +3,11 @@
 struct Book
 {
     int id;
-    char title[100];
-    char author[100];
-    char slug[100];
+    char slug[48];
+    char title[96];
+    char author[64];
+    char language[16];
+    char source[20];
+    int editionsCount;
+    int firstEditionRecord;
 };

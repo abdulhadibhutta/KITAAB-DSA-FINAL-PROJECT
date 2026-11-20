@@ -1,4 +1,6 @@
 #include "DynamicArray.h"
+#include <stdexcept>
+using namespace std;
 
 DynamicArray::DynamicArray()
 {
@@ -49,6 +51,11 @@ void DynamicArray::add(const Book& book)
     count++;
 }
 
+void DynamicArray::clear()
+{
+    count = 0;
+}
+
 void DynamicArray::resize()
 {
     capacity *= 2;
@@ -63,11 +70,17 @@ void DynamicArray::resize()
 
 Book& DynamicArray::get(int index)
 {
+    if(index < 0 or index >= count)
+        throw out_of_range("Invalid index");
+
     return books[index];
 }
 
 const Book& DynamicArray::get(int index) const
 {
+    if(index < 0 or index >= count)
+        throw out_of_range("Invalid index");
+
     return books[index];
 }
 
